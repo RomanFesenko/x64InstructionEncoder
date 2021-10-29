@@ -10,7 +10,7 @@ int main()
     using namespace encoding_x64;
     CCode c;
     c.finit();
-    c.fld(qword_ptr(rax));
+    c.fld(qword_ptr(rax));// pointer to function arguments pass via rax register
     c.fadd(qword_ptr(rax,8));
     c.fstp(qword_ptr(rax));
     c.ret();
