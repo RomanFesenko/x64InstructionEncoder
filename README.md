@@ -3,8 +3,8 @@ The purpose is to create small JIT compilers, for example, for arithmetic expres
 
 Minimal encoding example:
 
+```C++
 #include "encoding.h"
-
 int main()
 {
     using namespace encoding_x64;
@@ -18,10 +18,12 @@ int main()
     std::cout<<f.execute<double,double,double>(1.5,2.5)<<std::endl; // 4
     return 0;
 }
+```
 
 JIT implementation of arithmetic expressions is in expression_jit.cpp.
 Usage example:
 
+```C++
 #include <assert.h>
 #include "expression_jit.h"
 
@@ -33,3 +35,4 @@ int main()
     std::cout<<expr(0.1234)<<std::endl; //1, Code executing, not interpreter!
     return 0;
 }
+```
